@@ -1,0 +1,139 @@
+<!-- $Id: site_faq_fr.html 2142 2011-10-23 18:47:56Z cimorrison $ -->
+<!-- -*-mode: HTML; coding:utf-8;-*- -->
+
+<div id="site_faq_contents">
+  <a id="top"></a><h4>Authentification</h4>
+  <ul>
+    <li><a href="#authenticate">Comment s'identifier ?</a></li>
+    <li><a href="#meeting_delete">Pourquoi ne puis-je pas supprimer ou modifier une réservation ?</a></li>
+  </ul>
+  
+  <h4>Créer / Modifier les Réservations</h4>
+  <ul>
+    <li><a href="#repeating">Comment créer une réservation qui se répète ?</a></li>
+    <li><a href="#repeating_delete">Comment supprimer une seule réservation faisant partie d'une périodicité ?</a></li>
+    <li><a href="#multiple_sites">Comment réserver simultanément des équipements ?</a></li>
+    <li><a href="#too_many">Je ne peux pas créer la réservation, j'ai le message <q>trop de réservations</q>!</a></li>
+    <li><a href="#multiple_users">Que se passe-t'il si plusieurs personnes enregistrent la même réunion ?</a></li>
+  </ul>
+  
+
+  
+</div>
+
+<div id="site_faq_body">
+
+  <div id="authenticate">
+    <h4>Comment est-on identifié ?</h4>
+    <p>
+      L'application utilise le système LDAP pour vous identifier. Vous pouvez ainsi utiliser vos
+        identifiants Windows habituels pour vous connecter.
+        Contactez votre administrateur système si vous avez des problèmes pour
+      entrer dans l'application. Si vous n'êtes pas connectés, ou tentez d'effectuer une action qui ne
+        vous est pas autorisée, vous verrez le message <q>Vous n'avez pas les droits 
+      suffisants pour faire une modification</q>.
+    </p>
+    <a href="#top">Haut de page</a>
+  </div>
+  
+  <div id="meeting_delete">
+    <h4>Pourquoi ne puis-je pas supprimer ou modifier une réservation ?</h4>
+    <p>
+      Pour pouvoir supprimer ou modifier une réservation, vous devez être
+      authentifié comme étant la personne qui a créé la réservation.
+      Contactez un des administrateurs ou la personne qui a créé la
+      réservation pour la supprimer ou la modifier.
+    </p>
+    <a href="#top">Haut de page</a>
+  </div>
+  
+  <div id="repeating">
+    <h4>Comment créer une réservation qui se répète ?</h4>
+    <p>
+      Après avoir cliqué sur l'heure désirée, l'écran de réservation s'affiche.
+      Choisissez le <dfn>Type de Périodicité</dfn> approprié. La salle sera réservée
+      à la même heure, jusqu'à la <dfn>Date de Fin de Périodicité</dfn>, et seulement
+      pour les jours spécifiés par le Type de Périodicité.
+    </p>
+    <ul>
+      <li>
+        Le type <dfn>Jour</dfn> crée une réservation chaque jour.
+      </li>
+      <li>
+        Le type <dfn>Semaine</dfn> répète la
+        réservation pour les jours de la semaine que vous avez coché sur la ligne <dfn>Jour</dfn>.
+        Par exemple, pour une périodicité hebdomadaire programmée pour chaque lundi,
+        jeudi et vendredi, cochez ces jours sur la ligne Jour. Si vous ne cochez pas de
+        jours, la périodicité aura lieu chaque semaine le même jour que celui
+        initialement choisi. 
+      </li>
+      <li>
+        Le type <dfn>Mois</dfn> crée une périodicité le même jour
+        chaque mois, par exemple le 15 de chaque mois. 
+      </li>
+      <li>
+        Le type <dfn>Année</dfn> crée une
+        périodicité le même jour du même mois, par exemple chaque 15 mars.
+      </li>
+      <li>
+        Le type <dfn>Mois, même jour semaine</dfn> crée une périodicité 
+        un jour par mois, le même jour de
+        la semaine et avec la même position ordinale de la semaine dans le mois.
+        Utilisez ce type pour créer des périodicité du type le premier lundi, le
+        second jeudi ou le quatrième vendredi de chaque mois par exemple. N'utilisez
+        pas ce type pour des réservations après le 28ème jour du mois. 
+      </li>
+      <li>
+        Enfin le type <dfn>tous les n Semaines</dfn> est le même type que le type semaine mais permet de
+        spécifier un intervalle de semaines, par exemple tous les mardi et jeudi toutes les 3 semaines.
+      </li>
+    </ul>
+    <a href="#top">Haut de page</a>
+  </div>
+  
+  <div id="repeating_delete">
+    <h4>Comment supprimer une seule réservation faisant partie d'une périodicité ?</h4>
+    <p>
+      Choisissez la salle/jour/heure que vous voulez supprimer et choisissez <dfn>Effacer
+      une réservation</dfn>. Attention si vous modifiez ensuite la périodicité les
+      réservations supprimées individuellement reviendront.
+    </p>
+    <a href="#top">Haut de page</a>
+  </div>
+  
+  <div id="multiple_sites">
+    <h4>Comment réserver simultanément des équipements?</h4>
+    <p>
+      Ce n'est pas possible. Pour le moment, l'application ne peut pas enregistrer
+      simultanément une réservation pour 2 équipements différents. Vous devez créer
+      les réservations séparément. Assurez vous que les équipements sont disponibles aux
+      même périodes avant de faire la réservation.
+    </p>
+    <a href="#top">Haut de page</a>
+  </div>
+  
+  <div id="too_many">
+    <h4>Je ne peux pas créer la réservation, j'ai le message <q>trop de réservations</q>!</h4>
+    <p>
+      Il est impossible de créer plus de 365 réservations pour un équipement. Cette
+      limitation est nécessaire pour des raisons de sécurité. Des nettoyages de la base
+      de données sont effectués pour pallier à ce problème. Toutefois, si vous veniez à 
+      être bloqués, contactez un administrateur qui s'en chargera.
+    </p>
+    <a href="#top">Haut de page</a>
+  </div>
+  
+  <div id="multiple_users">
+    <h4>Que se passe t'il si plusieurs personnes enregistrent la même réservation ?</h4>
+    <p>
+      Réponse rapide : la première personne qui clique le bouton <dfn>Enregistrer</dfn>
+      gagne. En fait, techniquement l'application utilise une base de donnée relationnelle
+      multi-threaded, Multi-Utilisateurs qui peut gérer plusieurs milliers
+      d'utilisateurs simultanés.
+    </p>
+    <a href="#top">Haut de page</a>
+  </div>
+  
+
+
+</div>
